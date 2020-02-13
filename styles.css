@@ -1,0 +1,542 @@
+body{
+	margin: 0 auto ;
+	overflow-x: hidden;
+	height: 100%;
+	position: relative;
+}
+.overflow-y{
+	overflow-y: scroll;
+}
+.section{
+	height: 100vh;
+	font-family: Brandon Text,sans-serif;
+
+}
+/*tweede navbar verstoppen */
+.section header .hidden{
+	display: none;
+}
+ 
+.section header .onzichtbaar{
+	margin: 0% 10% 0% 20%;
+	padding-top: 4%;
+
+}
+.section header .onzichtbaar .tekst{
+	margin-left: 42%;
+	padding: 10% 3% 16% 3%;
+}
+.section header{
+	background-image: url("home-image-1.jpg");
+	height: auto;
+	width: auto;
+	box-shadow: inset 0 0 0 0.83333rem #fff;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;	
+}
+/*kleine vierkant onder het afbeelding*/
+path{
+	fill: white;
+	fill-rule: evenodd;
+}
+
+.section header .tekst span{
+	font-size: calc(26px + 20 * ((100vw - 700px) / 1300));
+	color: white;
+}
+
+.section header .tekst h1{
+	    font-size: calc(16px + 15 * ((100vw - 700px) / 1220));
+    font-weight: 200;
+	color: white;
+}
+.section header .tekst a{
+	text-decoration: none;
+	
+    padding: 5% 10% 5% 10%;
+    border-radius: 999px;
+    background-color: #1ba9e1;
+    color: #fff;
+    box-shadow: inset 0 -3px 0 0 #13769d;
+    line-height:  3.5em; 
+}
+.section header nav ul .naam{
+	font-size:1.5em;
+	color: white;
+}
+.section header nav{
+	display: flex;
+	height: 100px;
+}
+/*#scroll1{
+	top: -50px;  
+	
+}*/
+.scroll-navbar{
+	z-index: 1;
+	position: fixed;
+	background-color: hsla(0,0%,100%,.95);
+    height: 3.88889rem;
+    width: 100%;
+    border-bottom: .05556rem solid rgba(0,0,0,.06);
+ 	transition: top 0.3s;
+}
+.section header .scroll-navbar ul{
+	position: absolute;
+    top: 30%;
+}
+.section header .scroll-navbar ul div,.section header .scroll-navbar ul li a {
+	color: #7d818e;
+} 
+.section header nav ul{
+
+	display: flex;
+	float: left;
+	align-items: center;	
+	margin: 0;
+}
+.section header nav ul li{
+	padding-left: 35px;
+	list-style:none;
+
+}
+.section header nav ul li a{
+	color: white;
+	text-decoration:none;
+}
+.section .num1{
+	display: flex;
+	margin: 5% 8% 5% 0%;
+}
+.section .num2{
+	display: flex;
+	position: relative;
+	padding: 5% 0% 6% 0%;
+}
+.section .num2::before{
+	content: "";
+    position: absolute;
+    top: 0;
+	left: calc((107.5vw - 100%) / -2);
+    width: 107.5vw;
+    height: 100%;
+    background-color: rgba(27,169,225,.1);
+    transform: skewY(-2deg);
+    transform-origin: top left;
+    z-index: -1;
+}/*
+.section main #table{
+	width: 70%;
+}*/
+.section main .article{
+	width:55%;
+	margin-left: 8%
+}
+.section main .article h1{
+	font-size: calc(25px + 15 * ((100vw - 700px) / 1220));
+	color: #6db553;
+	max-width: 8em;
+}
+.section main .article p, .section main .article .info{
+	background-color: white;
+	color: #545761;
+	font-size: 18px;
+	width: 100%;
+    font-weight: 400;
+    line-height: 1.6;
+    border-style: outset;
+    border-radius: 10px 10px;
+    padding: 3% 3% 5% 3%;
+}
+.section .num1 img , .section .num2 img{
+	border-radius: 15px 50px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.section .slide-show img{
+	border-radius: 15px 50px 30px 5px;
+	box-shadow: 2px 2px #7d818e;;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.section .num2 img{
+	width: 90%;
+	height: auto;
+	margin: 8% 0% 20% 30%;
+	max-height: 313.531px;
+	max-width: 316.156px;
+}
+.section .num1 img{
+	width: 90%;
+	height: auto;
+	margin: 25% 0% 4% 30%;
+	max-height: 313.531px;
+	max-width: 316.156px;
+}
+.section .slide-show .slideshow-container .fade img{
+	/*padding: 0% 20% 0% 10%;*/
+	width: 100%;
+}
+#scroll2{
+	display: none;
+}
+/*----------------------------SLIDE-SHOW-------------------------*/
+.mySlides{
+	display: none;
+}
+#show{
+	display: block;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.slide-text1 {
+  color: #7d818e;
+  font-size: calc(16px + 100 * ((100vw - 300px) / 1220));
+  padding: 3%  5% 28% 3%;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.slide-text {
+  color: #7d818e;
+  font-size: 20px;
+  padding: 5% 20% 30% 25%;
+  position: absolute;
+  bottom: 8px;
+  width: 50%;
+  text-align: center;
+}
+
+/* The dots */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/*------------------footer------------------*/
+.footer{	
+	padding: 14px;
+	width: 100%
+	height: 20%
+	font-family: Brandon Text,sans-serif;
+	background-color: #323335;
+	display: flex;	
+	align-items: center;
+}
+.footer h1{
+
+	padding-left: 3%;
+	color: #8c8b97;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.footer a{
+	padding-left: 2%;
+	color: #cacedb;
+    font-size: .88889rem;
+    text-decoration: none;
+}
+
+/*----------------------------------------*/
+@media only screen and (max-width: 989px) {
+	#scroll1{
+		display: none;
+	}
+	#scroll2{
+	display: block;
+	}
+
+    .section main .article{
+	width:auto;
+	}
+    .section .num1{
+    display: flex;
+    flex-wrap: wrap;
+	margin: 5% 8% 5% 8%;
+    }
+
+    .section .num2{
+    flex-wrap: wrap;
+	margin: 5% 8% 5% 0%;
+	padding-bottom: 10%;
+   	flex-direction: column-reverse;
+    }
+
+    .section .num2 img {
+    	margin-bottom: 15px;
+    }
+    .section .num1 img{
+	padding-bottom: 5%;	
+	margin: 10% 0% 4% 70%;
+	max-height: 350px;
+    max-width: 350px;
+	}
+
+	.section header .verdwijnen{
+	display: none;
+
+	}
+
+	.section header .hidden{
+	display: inline-block;
+	display: flex;
+    align-items: center;
+    margin: 0;
+    justify-content: space-between;
+	}
+
+	.overlay {
+	overflow-y: hidden;
+    height: 0%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255, .90);
+    transition: 0.5s;
+	}
+
+	.overlay {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+	}
+
+	.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 230px;
+    max-width: 230px;
+    text-align: center;
+    margin-left:calc( 50% - 115px);
+    list-style-type: none;
+	}
+
+	.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+	}
+
+	.section header nav .naam {
+       font-size: calc(26px + 30 * ((100vw - 600px) / 1220));
+       font-size: 1.5em;
+       color: white;
+       float: left;
+       margin-top: 30px;
+    }
+
+    .section header nav .form1{
+    	font-size: 30px;
+    	cursor: default;
+    	float:right;
+    	margin-right: 20px;
+    	color:white;
+    	margin-top: 20px;
+    }     
+    .section header .scroll-navbar .form1, .section header .scroll-navbar .naam{
+     color: #7d818e;
+     }
+    .section header nav .form2{
+	display: none;
+	}    
+    .section header nav {
+       padding-left: 20px;
+       padding-right: 15px;
+    }
+    .section header .onzichtbaar .tekst {
+    margin-left: 10%;
+    padding: 10% 3% 10% 5%;
+	}
+	.scroll-navbar{
+    width: calc( 100% - 30px);
+}
+}
+@media only screen and (max-width: 672px) 
+{
+	.section main .article p{
+	font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+	}
+	.section header .scroll-navbar .form2, .section header .scroll-navbar .naam{
+	color: #7d818e;
+	}
+	.section header nav .form2{
+		display: block;
+    	font-size: 30px;
+    	cursor: default;
+    	float:right;
+    	margin-right: 10px;
+    	color:white;
+    	margin-top: 20px;
+    } 
+
+    .section header #scroll2 .form1{
+	display: none;
+	}
+
+	.section header .onzichtbaar {
+    margin: 0% 5% 0% 20%;
+	}
+
+	.section header .onzichtbaar .tekst {
+    margin-left: 0%;
+	}
+
+	.section header .tekst h1 {
+    font-size: calc(16px + 28 * ((100vw - 300px) / 1220));
+	}
+
+	.section header .tekst span {
+    font-size: calc(26px + 30 * ((100vw - 400px) / 1220));
+	}
+
+	.section .num1 img {
+    margin-left: 30%;
+	}
+
+	.section .num2 img {
+    margin-left: 20%;
+	}	
+
+}
+@media only screen and (max-width: 420px){
+	.section .num1 img {
+    margin-left: 13%;
+	}
+	.section .num2 img {
+    margin-left: 13%;
+	}
+	.slide-text {
+    padding: 5% 20% 18% 25%;
+    font-size: 13px;
+	}
+} 
+@media only screen and (max-width: 1024px) and (min-width: 767px){
+	.section .num2::before{
+	left: calc((100vw - 100%) / -2);
+    width: 100vw;
+	}
+	.slide-text{
+	margin-bottom: 5%;
+	}
+}
+@media only screen and (max-width: 1000px) {
+
+	.slide-text h1 {
+    margin: 0;
+	}
+	.slide-text p {
+    margin-bottom: 5px;
+	}
+
+	.slide-text {
+    padding: 5% 20% 15% 25%;
+	}
+	.slide-text1 {
+	    padding: 3% 0% 28% 0%;
+	}
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	.section .num1 .article .info tr .gone{
+		display: none;
+	}
+	
+	.section main #table{
+		width: 100%;
+		margin-left: 0;
+	}
+
+	tr { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	.gone1:nth-of-type(1):before { content: "Naam"; }
+	.gone2:nth-of-type(1):before { content: "Adres"; }
+	.gone3:nth-of-type(1):before { content: "Postcode"; }
+	.gone4:nth-of-type(1):before { content: "Woonplaats"; }
+	.gone5:nth-of-type(1):before { content: "Mobiel"; }
+	.gone6:nth-of-type(1):before { content: "Email"; }
+	.gone7:nth-of-type(1):before { content: "Geboortedatum"; }
+	.gone8:nth-of-type(1):before { content: "Geboorteplaats"; }
+	.gone9:nth-of-type(1):before { content: "Nationaliteit"; }
+}
